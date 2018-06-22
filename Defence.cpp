@@ -19,7 +19,7 @@ void Control::SimpleMode()
 
 }
 
-void Control::HighMode()
+void Control::Advenced_Mode()
 {
 
 }
