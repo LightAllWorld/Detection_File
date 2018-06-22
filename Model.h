@@ -1,3 +1,21 @@
+/************************************************************************
+* File Name : Model.h													*
+* Description : This file manages list about exception files.			*
+* Functions :															*
+*	1. Init_cost														*
+*		- This is to initializing a cost value							*
+*	2. Init_train														*
+*		- This is to initializing a train tensor.						*
+*	3. ReLU																*
+*		- This is a activate function.									*
+*	4. Cast																*
+*		- This is to set prameters for accuracy.						*
+*	5. Check_Directory													*
+*		- This is to check directory for determining detect range.		*
+*	6. feed_dict														*
+*		- This is to offer parameter to detection algorithm.			* 
+************************************************************************/
+
 #pragma once
 
 class Detection_Model
