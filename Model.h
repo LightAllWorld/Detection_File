@@ -14,6 +14,8 @@
 *		- This is to check directory for determining detect range.		*
 *	6. feed_dict														*
 *		- This is to offer parameter to detection algorithm.			* 
+*	7	get_exc_list													*
+*		- This gets the except list from singleton.						*
 ************************************************************************/
 
 #pragma once
