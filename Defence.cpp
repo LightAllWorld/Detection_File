@@ -1,10 +1,12 @@
 #include "Defence.h"
 #include "Simple_Model.h"
 #include "Advenced_Model.h"
+#include "Preprocess.h"
 #include <iostream>
 
 Simple simp;
 Advence adv;
+Preprocess pre;
 
 void Control::Set_Directory(std::string dir)
 {
@@ -29,6 +31,7 @@ void Control::SimpleMode()
 
 void Control::Advenced_Mode()
 {
+	adv.Set_Option(option);
 	Preprocessing();
 
 	std::cout<<"Advenced_mode call.\n";
@@ -55,5 +58,7 @@ void Control::Set_Dir_Info(std::string path)
 void Control::Preprocessing()
 {
 	std::cout<<"Call preprocessing function. (This is repeated by the number of files in the directory.)\n";
+	pre.Set_dir(dir);
+	pre.Process();
 	return;
 }
