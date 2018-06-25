@@ -28,7 +28,7 @@
 class Control
 {
 public:
-	void Set_Directiory(std::string dir);
+	void Set_Directory(std::string dir);
 	void Set_Option(std::string option);
 	void SimpleMode();
 	void Advenced_Mode();
@@ -41,5 +41,4 @@ private:
 	void Preprocessing();
 	std::string dir;
 	std::string option;
-	std::list<std::string> list;
 };

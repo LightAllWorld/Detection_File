@@ -1,6 +1,10 @@
 #include "Defence.h"
-#include "Except_List.cpp"
+#include "Simple_Model.h"
+#include "Advenced_Model.h"
 #include <iostream>
+
+Simple simp;
+Advence adv;
 
 void Control::Set_Directory(std::string dir)
 {
@@ -8,7 +12,7 @@ void Control::Set_Directory(std::string dir)
 	return;
 }
 
-void Control::Set_Option(setd::string option)
+void Control::Set_Option(std::string option)
 {
 	Set_Op_Info(option);
 	return;
@@ -16,17 +20,19 @@ void Control::Set_Option(setd::string option)
 
 void Control::SimpleMode()
 {
+	Preprocessing();
 
+	std::cout<<"Simple Mode call.\n";
+	simp.Detection();
+	return;
 }
 
 void Control::Advenced_Mode()
 {
+	Preprocessing();
 
-}
-
-void Control::Check_Exception_list()
-{
-	this->list = get_List();
+	std::cout<<"Advenced_mode call.\n";
+	adv.Detection();
 	return;
 }
 
@@ -48,5 +54,6 @@ void Control::Set_Dir_Info(std::string path)
 
 void Control::Preprocessing()
 {
-
+	std::cout<<"Call preprocessing function. (This is repeated by the number of files in the directory.)\n";
+	return;
 }
