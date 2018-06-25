@@ -6,6 +6,8 @@
 *		- This works changing program's state to detecting mode.		*
 *	2. Turn_Off															*
 *		- This works changing program's state to sleep mode.			*
+*	3. get_state														*
+*		- This is to get info of state.									*
 ************************************************************************/
 #pragma once
 #include <iostream>
@@ -16,8 +18,9 @@ public:
 	void Turn_Off();
 	On_Off()
 	{
-		state = false;
+		state = true;
 	}
+	bool get_state();
 private:
 	bool state;
 };
