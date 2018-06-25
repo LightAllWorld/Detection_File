@@ -17,12 +17,17 @@
 ************************************************************************/
 
 #pragma once
+#include <list>
+#include "Except_list.h"
 
 class Detection_Model
 {
 public:
-	virtual void Detection();
-private:
+	virtual void Detection() {
+		return;
+	};
+
+protected:
 	// functions
 	void Init_cost();
 	void Init_train();
@@ -30,4 +35,10 @@ private:
 	void Cast();
 	void Check_Directory();
 	void feed_dict();
+	void get_exc_list();
+	//A Attribute
+	float cost;
+	float train;
+	float hypothesis;
+	std::list<std::string> list;
 };
