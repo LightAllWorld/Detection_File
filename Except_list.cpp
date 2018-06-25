@@ -1,7 +1,9 @@
 #include "Except_list.h"
 #include <iostream>
 
-
+Except_list* Except_list::instance = NULL;
+bool Except_list::flag = false;
+std::list<std::string> Except_list::exc_list;
 bool Except_list::Is_Empty()
 {
 	if( exc_list.empty() )
@@ -147,4 +149,20 @@ void Except_list::Display()
 	for( iter = exc_list.begin() ; iter != exc_list.end() ; iter++ )
 		std::cout<<*iter<<" ";
 	std::cout<<"\n====================================================\n";
+}
+
+Except_list* Except_list::get_Inst()
+{
+	if( !instance )
+	{
+		instance = new Except_list();
+		flag = true;
+	}
+	std::cout<<"Call get_List function.\n";
+	return instance;
+}
+
+std::list<std::string> Except_list::get_list()
+{
+	return exc_list;
 }
