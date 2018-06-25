@@ -27,7 +27,8 @@ class Advence : public Detection_Model
 {
 public:
 	void Detection();
-
+	void Set_Option(std::string option);
+	
 private:
 	// Convloutional layer function
 	void Conv_Layer1();
@@ -65,5 +66,7 @@ private:
 
 	// ohter attributes
 	void get_except_list();
-	std::list<std::string> list;
+
+	std::string option;
+	std::list<std::string> list;	
 };

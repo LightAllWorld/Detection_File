@@ -74,3 +74,9 @@ void Advence::ReLU()
 	std::cout<<"This is a ReLU function.\n";
 	return;
 }
+
+void Advence::Set_Option(std::string option)
+{
+	std::cout<<"Advenced Model's set_Option function call.\n";
+	this->option = option;
+}
