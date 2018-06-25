@@ -33,14 +33,22 @@ protected:
 	// functions
 	void Init_cost();
 	void Init_train();
+	void Init_Session();
 	float ReLU();
 	void Cast();
 	void Check_Directory();
 	void feed_dict();
 	void get_exc_list();
+	
 	//A Attribute
+	float weight;
+	float x_data;
+	float y_data;
+	float X;
+	float Y;
 	float cost;
 	float train;
 	float hypothesis;
+	float sess;
 	std::list<std::string> list;
 };
