@@ -1,4 +1,4 @@
-This is a program that detects malicious
+This is a program that detects malicious file.
 
 ---------
 ### Background
